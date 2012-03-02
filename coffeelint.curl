@@ -1,0 +1,5 @@
+#!/bin/bash
+# A faster way to jslint; curl's start-up cost is much lower than rhino's.
+COFFEELINT_URL="http://localhost:3004/coffeelint"
+exec curl --form source="<${1}" --form filename="${1}" ${COFFEELINT_URL}
+#exec curl --form source="@${1}" ${JSLINT_URL}

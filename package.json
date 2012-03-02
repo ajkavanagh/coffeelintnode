@@ -1,0 +1,17 @@
+{
+    "name": "coffeelintnode",
+    "version": "0.0.1",
+    "description": "A Coffeelint server for more expedient linting.",
+    "homepage": "<None>",
+    "author": {
+        "name": "Alex Kavanagh",
+        "url": "http://alex.kavanagh.name"
+    },
+    "dependencies": {
+        "express": ">=2.5.0",
+        "haml": ">=0.2.0",
+        "underscore": "",
+	"coffeelint": ">=0.2"
+    },
+    "engines": ["node >= 0.6.0"]
+}
