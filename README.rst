@@ -50,6 +50,30 @@ See the included `flymake-coffeelint.el`__.
 
 .. __: flymake-coffeelint.el
 
+The following configuration should be useful in getting it to work:
+
+
+.. code-block:: lisp
+
+	;; make coffeelinenode work nicely!
+	(add-to-list 'load-path "path-to-coffeelintnode")
+	(require 'flymake-coffeelint)
+	;; Make sure we can find the lintnode executable
+	(setq coffeelintnode-location "path-to-coffeelintnode")
+	(setq coffeelintnode-node-program "path-to-node-executable")
+	(setq coffeelintnode-coffeelint-excludes (list 'max_line_length))
+	(setq coffeelintnode-coffeelint-includes '())
+	(setq coffeelintnode-coffeelint-set "")
+	;; Start the server when we first open a coffee file and start checking
+	(setq coffeelintnode-autostart 'true)
+	(add-hook 'coffee-mode-hook
+	  (lambda ()
+	    (coffeelintnode-hook)
+	    (unless (eq buffer-file-name nil) (flymake-mode 1)) ;dont invoke flymake on temporary buffers for the interpreter
+	    (local-set-key [f2] 'flymake-goto-prev-error)
+	    (local-set-key [f3] 'flymake-goto-next-error)))
+
+
 
 Configuration
 -------------
