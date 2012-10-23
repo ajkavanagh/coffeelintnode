@@ -54,7 +54,7 @@
 (defvar coffeelintnode-coffeelint-includes nil
   "a list of lisp symbols corresponding to coffeelint boolean options")
 
-(defvar coffeelintnode-coffeelint-set nil
+(defvar coffeelintnode-coffeelint-set ""
   "a string of comma seperated jslint options; values are seperated via colon, e.g. max_line_length:80,indentation:true,no_tabs:false")
 
 (defun coffeelintnode-start ()
