@@ -33,7 +33,7 @@
   :type 'string
   :group 'flymake-coffeelint)
 
-(defcustom coffeelintnode-location "~/emacs/coffeelintnode"
+(defcustom coffeelintnode-location (file-name-directory load-file-name)
   "The directory coffeelintnode's app.js may be found in."
   :type 'string
   :group 'flymake-coffeelint)
