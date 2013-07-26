@@ -33,7 +33,7 @@
   :type 'string
   :group 'flymake-coffeelint)
 
-(defcustom coffeelintnode-location "~/emacs/coffeelintnode"
+(defcustom coffeelintnode-location (file-name-directory load-file-name)
   "The directory coffeelintnode's app.js may be found in."
   :type 'string
   :group 'flymake-coffeelint)
@@ -54,7 +54,7 @@
 (defvar coffeelintnode-coffeelint-includes nil
   "a list of lisp symbols corresponding to coffeelint boolean options")
 
-(defvar coffeelintnode-coffeelint-set nil
+(defvar coffeelintnode-coffeelint-set ""
   "a string of comma seperated jslint options; values are seperated via colon, e.g. max_line_length:80,indentation:true,no_tabs:false")
 
 (defun coffeelintnode-start ()
