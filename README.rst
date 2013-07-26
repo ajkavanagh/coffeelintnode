@@ -1,6 +1,14 @@
 coffeelintnode - a coffee-script lint server for more expedient linting
 =======================================================================
 
+I'm no longer maintaining this fork
+-----------------------------------
+
+I've stoped using Emacs in favour of Sublime Text 2 since I got a Mac and thus I'm no longer updating this repository.  However, there is a more upto date fork by Andrei Neculau at `andreineculau`_.
+
+Continues:
+----------
+
 This is essentially a copy of `lintnode`_ (the David Miller fork
 `davidmiller_lintnode`_) which is a fast way of Lint-ing JavaScript
 code in the Emacs buffer, on-the-fly, using `flymake-mode`.  All I did
@@ -13,6 +21,8 @@ The following modules are needed with node: `coffeelint`_, `express`_
 and underscore.  I recommend using npm to install them localling to
 the directory.
 
+See also `JSLint`_.
+
 .. _lintnode: https://github.com/keturn/lintnode
 .. _davidmiller_lintnode: https://github.com/davidmiller/lintnode
 .. _coffeelint: https://github.com/clutchski/coffeelint
@@ -21,8 +31,7 @@ the directory.
 .. _node.js: http://nodejs.org/
 .. _Express: http://expressjs.com/
 .. _npm: http://npmjs.org/
-
-Note that this depends on
+.. _andreineculau: https://github.com/andreineculau/coffeelintnode
 
 
 Usage
